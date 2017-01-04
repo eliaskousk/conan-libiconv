@@ -4,8 +4,8 @@ import os
 
 
 ############### CONFIGURE THESE VALUES ##################
-default_user = "lasote"
-default_channel = "testing"
+default_user = "eliaskousk"
+default_channel = "stable"
 #########################################################
 
 channel = os.getenv("CONAN_CHANNEL", default_channel)
@@ -27,6 +27,6 @@ class DefaultNameConan(ConanFile):
     def imports(self):
         self.copy(pattern="*.dll", dst="bin", src="bin")
         self.copy(pattern="*.dylib", dst="bin", src="lib")
-        
+
     def test(self):
         self.run(".%sbin%sexample --help" % (os.sep, os.sep))

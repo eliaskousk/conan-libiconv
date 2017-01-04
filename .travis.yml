@@ -7,8 +7,8 @@ env:
   global:
     - CONAN_UPLOAD=1
     - CONAN_REFERENCE="libiconv/1.14"
-    - CONAN_USERNAME="lasote"
-    - CONAN_CHANNEL="ci"
+    - CONAN_USERNAME="eliaskousk"
+    - CONAN_CHANNEL="stable"
     - CONAN_TOTAL_PAGES=1
     - CONAN_CURRENT_PAGE=1
 
