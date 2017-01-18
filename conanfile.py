@@ -14,7 +14,7 @@ class LibiconvConan(ConanFile):
     options = {"shared": [True, False]}
     default_options = "shared=False"
     url = "http://github.com/eliaskousk/conan-libiconv"
-    #requires = "zlib/1.2.8@lasote/stable"
+    #requires = "zlib/1.2.9@lasote/stable"
 
     def source(self):
         if self.settings.os != "Windows": # wraps winiconv for windows
