@@ -6,7 +6,7 @@ from conans import CMake, ConfigureEnvironment
 
 class LibiconvConan(ConanFile):
     name = "libiconv"
-    version = "1.14"
+    version = "1.15"
     branch = "master"
     ZIP_FOLDER_NAME = "libiconv-%s" % version
     generators = "cmake"
@@ -20,7 +20,7 @@ class LibiconvConan(ConanFile):
         if self.settings.os != "Windows": # wraps winiconv for windows
             zip_name = "libiconv-%s.tar.gz" % self.version
             download("http://ftp.gnu.org/pub/gnu/libiconv/%s" % zip_name, zip_name)
-            check_md5(zip_name, "e34509b1623cec449dfeb73d7ce9c6c6")
+            check_md5(zip_name, "ace8b5f2db42f7b3b3057585e80d9808")
             unzip(zip_name)
             os.unlink(zip_name)
             if self.settings.os == "Linux":
